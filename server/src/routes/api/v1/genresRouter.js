@@ -1,4 +1,5 @@
 import express from "express"
+import genreMoviesRouter from "./genreMoviesRouter.js"
 
 import { Genre } from "../../../models/index.js"
 
@@ -23,5 +24,7 @@ genresRouter.get("/:id", async (req, res) => {
     return res.status(500).json({ errors: error })
   }
 })
+
+genresRouter.use("/:genreId/movies", genreMoviesRouter)
 
 export default genresRouter
