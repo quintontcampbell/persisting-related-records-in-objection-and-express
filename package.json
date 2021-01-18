@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "build:client": "yarn workspace persisting-related-records-in-objection-and-express-client build",
+    "dev": "yarn workspace persisting-related-records-in-objection-and-express-server dev",
+    "dev:debug": "yarn workspace persisting-related-records-in-objection-and-express-server dev:debug",
+    "heroku-postbuild": "yarn workspace persisting-related-records-in-objection-and-express-client build",
+    "start": "yarn workspace persisting-related-records-in-objection-and-express-server start"
+  },
+  "engines": {
+    "node": "^14.15"
+  }
+}
